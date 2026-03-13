@@ -1,0 +1,227 @@
+/* global styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 100%;
+}
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.work-sans-font {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.btn{
+    background-color: aqua;
+    padding:8px 20px ;
+    border-radius: 16px;
+    border: none;
+    font-weight: 700;
+
+
+}.btn:hover{
+    background-color: blue;
+    color: white;
+}
+
+/* shared styles */
+.container{
+    max-width: 1250px;
+    margin: auto;
+}
+.display-flex{
+    display: flex;
+}
+nav{
+    justify-content: space-between;
+}
+nav>div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+nav > div > img{
+    width: 50px;
+    height: 50px;
+}
+nav > div >h1 {
+    font-weight: 700;
+    font-size: 25px;
+}
+nav > div > h1 > span{
+    color: rgb(255, 89, 0);
+}
+nav > ul{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    list-style: none;
+}
+nav >ul >li >a {
+    text-decoration: none;
+}
+.hero{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.877), rgba(255, 255, 255, 0.148)), url(../assets/img/Group\ 13\ \(1\)\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero .rounded-mic-parent{
+    position: relative;
+}
+.hero .rounded-shape{
+    width: 170px;
+    height: auto;
+}
+.hero .mic{
+    width: 70px;
+    height: auto;
+    /* position: relative;
+    right: 120px;
+    bottom: 35px; */
+
+    /* good practice for keeping something in center position  */
+    /* here is what I learned , to keep and icon inside a rounded bg , we have to keep bg and icon in a same parent
+    and the parent should be relative , and only the icon should be absolute 
+    code is below 
+    position: absolute;
+    :left 50%
+    top 50%
+    transform translate(-50% ,-50%)
+ */
+
+
+
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.hero .rounded-mic-parent span{
+    background-color: #00ff88;
+    padding: 6px 15px;
+    font-weight: 600;
+    border-radius: 15px;
+    display: inline-block;
+    color: black;
+    position: absolute;
+    top: 5% ;
+    left: 58%;
+    transform: translate(-50% , -50%);
+}
+.hero > div{
+    width: 660px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.hero > div >  h2 {
+    font-weight: 700;
+    font-size: 32px;
+}
+.hero >div > form{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    outline: #fff;
+}
+.hero > div> form input[type="text"],
+.hero > div > form select{
+    padding: 16px;
+    border-radius: 8px;
+    background: #fff;
+    display: block;
+    outline: none;
+    border: none;
+    color: rgb(1, 1, 62);
+}
+.section-header{
+    max-width: 650px;
+    margin: auto;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.section-header{
+    max-width: 650px;
+}
+.destination-section{
+    margin: 60px auto;
+}
+.section-header h2{
+    margin-bottom: 20px;
+}
+
+.destination-pics div{
+    position: relative;
+}
+.destination-pics div strong{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50% );
+    
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+.destination-pics img{
+    height: 250px;
+}
+
+/* multiple photos organization by grid like gallery */
+
+.destination-section .destination-pics{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 10px ;
+}
+
+/* using sudo class as selector under same parent */
+.destination-pics div:nth-child(1){
+    grid-column: span 6;
+}
+.destination-pics div:nth-child(2){
+    grid-column: span 6;
+}
+.destination-pics div:nth-child(3){
+    grid-column: span 4;
+}
+.destination-pics div:nth-child(4){
+    grid-column: span 3;
+}
+.destination-pics div:nth-child(5){
+    grid-column: span 5;
+}
+.destination-pics div:nth-child(6){
+    grid-column : span 4 ;
+}
+.destination-pics div:nth-child(7){
+    grid-column: span 4;
+}
+.destination-pics div:nth-child(8){
+    grid-column: span 4;
+}
+.destination-pics div:nth-child(9){
+    grid-column: span ;
+}
+.destination-pics div:nth-child(10){
+    grid-column: span 6;
+}
