@@ -12,4 +12,18 @@
     .hero > div> form{
         flex-direction: column ;
     }
+
+    /* destination section */
+    .destination-pics div{
+    grid-column: span 6 !important;
+    }
+    /* the keyword important is necessary for prioritizing before other styles  */
+
+    .container{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .deal-banner{
+        border-radius: 15px;
+    }
 }
